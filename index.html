@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IIT Learning Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:
+radial-gradient(circle at top left,#38bdf830,transparent 25%),
+radial-gradient(circle at bottom right,#9333ea30,transparent 25%),
+#020617;
+
+color:white;
+overflow-x:hidden;
+
+}
+
+header{
+
+padding:30px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+backdrop-filter:blur(20px);
+
+background:rgba(255,255,255,0.04);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+position:sticky;
+top:0;
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+color:#38bdf8;
+
+}
+
+.nav{
+
+display:flex;
+gap:20px;
+
+}
+
+.nav a{
+
+text-decoration:none;
+color:white;
+opacity:.85;
+transition:.3s;
+
+}
+
+.nav a:hover{
+
+color:#38bdf8;
+
+}
+
+.hero{
+
+padding:80px 20px;
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:60px;
+font-weight:700;
+line-height:1.3;
+
+}
+
+.hero span{
+
+color:#38bdf8;
+
+}
+
+.hero p{
+
+margin-top:20px;
+font-size:18px;
+opacity:.8;
+
+}
+
+.hero-buttons{
+
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:16px 28px;
+border:none;
+border-radius:16px;
+cursor:pointer;
+font-weight:600;
+font-size:16px;
+transition:.3s;
+text-decoration:none;
+
+}
+
+.primary{
+
+background:linear-gradient(
+45deg,
+#38bdf8,
+#0ea5e9
+);
+
+color:black;
+
+box-shadow:
+0 0 30px rgba(56,189,248,.35);
+
+}
+
+.primary:hover{
+
+transform:translateY(-4px);
+
+}
+
+.secondary{
+
+background:rgba(255,255,255,.06);
+
+color:white;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.secondary:hover{
+
+transform:translateY(-4px);
+
+}
+
+.stats{
+
+width:95%;
+max-width:1300px;
+
+margin:auto;
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+padding:20px;
+
+}
+
+.stat-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+padding:25px;
+
+border-radius:24px;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0 0 25px rgba(56,189,248,.25);
+
+}
+
+.stat-card h2{
+
+font-size:34px;
+color:#38bdf8;
+
+}
+
+.stat-card p{
+
+margin-top:10px;
+opacity:.8;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-top:60px;
+margin-bottom:30px;
+
+font-size:38px;
+font-weight:700;
+
+}
+
+.features{
+
+width:95%;
+max-width:1300px;
+
+margin:auto;
+
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:20px;
+
+padding-bottom:30px;
+
+}
+
+.feature-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+padding:30px;
+
+border-radius:24px;
+
+transition:.3s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+0 0 30px rgba(56,189,248,.25);
+
+}
+
+.feature-card h3{
+
+font-size:26px;
+color:#38bdf8;
+
+margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+opacity:.85;
+line-height:1.8;
+
+}
+
+.feature-card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:14px 22px;
+
+border-radius:14px;
+
+background:#38bdf8;
+
+color:black;
+
+font-weight:600;
+
+text-decoration:none;
+
+}
+
+.subjects{
+
+width:95%;
+max-width:1300px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+.subject{
+
+padding:30px;
+
+text-align:center;
+
+border-radius:24px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+transition:.3s;
+
+}
+
+.subject:hover{
+
+transform:scale(1.03);
+
+}
+
+.subject h2{
+
+font-size:30px;
+
+margin-bottom:10px;
+
+}
+.subject p{
+
+  opacity:.8;
+
+  }
+
+  .footer{
+
+  margin-top:80px;
+
+  padding:40px;
+
+  text-align:center;
+
+  background:rgba(255,255,255,.04);
+
+  border-top:1px solid rgba(255,255,255,.08);
+
+  }
+
+  .footer h3{
+
+  color:#38bdf8;
+
+  margin-bottom:10px;
+
+  }
+
+  .footer p{
+
+  opacity:.8;
+
+  }
+
+  @media(max-width:900px){
+
+  .hero h1{
+
+  font-size:42px;
+
+  }
+
+  header{
+
+  flex-direction:column;
+  gap:15px;
+
+  }
+
+  }
+
+  </style>
+  </head>
+
+  <body>
+
+  <header>
+
+  <div class="logo">
+  🧠 IIT Learning Hub
+  </div>
+
+  <div class="nav">
+
+  <a href="#">Home</a>
+  <a href="#">Learn</a>
+  <a href="#">Solve</a>
+  <a href="#">JEE</a>
+
+  </div>
+
+  </header>
+
+  <section class="hero">
+
+  <h1>
+  Master <span>JEE Main</span><br>
+  & <span>JEE Advanced</span>
+  </h1>
+
+  <p>
+  Premium AI Learning Platform for IIT Aspirants
+  </p>
+
+  <div class="hero-buttons">
+
+  <a
+  href="https://iitlearning.vercel.app/"
+  class="btn primary">
+
+  📚 Start Learning
+
+  </a>
+
+  <a
+  href="https://iitpage.vercel.app/"
+  class="btn secondary">
+
+  🚀 Solve Questions
+
+  </a>
+
+  </div>
+
+  </section>
+
+  <section class="stats">
+
+  <div class="stat-card">
+
+  <h2>24×7</h2>
+  <p>AI Teacher</p>
+
+  </div>
+
+  <div class="stat-card">
+
+  <h2>JEE</h2>
+  <p>Main + Advanced</p>
+
+  </div>
+
+  <div class="stat-card">
+
+  <h2>∞</h2>
+  <p>Practice Questions</p>
+
+  </div>
+
+  <div class="stat-card">
+
+  <h2>AI</h2>
+  <p>Instant Doubt Solving</p>
+
+  </div>
+
+  </section>
+
+  <h2 class="section-title">
+  🚀 Learning Ecosystem
+  </h2>
+
+  <section class="features">
+
+  <div class="feature-card">
+
+  <h3>📚 IIT Learning</h3>
+
+  <p>
+
+  Learn concepts deeply with AI-generated
+  lessons, revision notes, formulas,
+  and MCQ-based practice.
+
+  </p>
+
+  <a href="https://iitlearning.vercel.app/">
+  Open Learning Hub
+  </a>
+
+  </div>
+
+  <div class="feature-card">
+
+  <h3>🧠 IIT Solver</h3>
+
+  <p>
+
+  Solve Physics, Chemistry and Mathematics
+  questions with step-by-step AI solutions,
+  hints and evaluation.
+
+  </p>
+
+  <a href="https://iitpage.vercel.app/">
+  Open Solver
+  </a>
+
+  </div>
+
+  </section>
+
+  <h2 class="section-title">
+  🔥 Core Subjects
+  </h2>
+
+  <section class="subjects">
+
+  <div class="subject">
+
+  <h2>⚛ Physics</h2>
+
+  <p>
+  Mechanics, Thermodynamics,
+  Electrodynamics, Modern Physics
+  </p>
+
+  </div>
+
+  <div class="subject">
+
+  <h2>🧮 Mathematics</h2>
+
+  <p>
+  Calculus, Algebra,
+  Coordinate Geometry, Vectors
+  </p>
+
+  </div>
+
+  <div class="subject">
+
+  <h2>🧪 Chemistry</h2>
+
+  <p>
+  Physical, Organic
+  and Inorganic Chemistry
+  </p>
+
+  </div>
+
+  </section>
+
+  <div class="footer">
+
+  <h3>🚀 IIT Learning Hub</h3>
+
+  <p>
+
+  Built for Future IITians • AI Powered Learning
+
+  </p>
+
+  </div>
+
+  </body>
+  </html>
+}
