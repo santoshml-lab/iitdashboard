@@ -363,3 +363,256 @@ header{
     opacity:.8;
 
 }
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title{
+
+    text-align:center;
+
+    margin-top:60px;
+    margin-bottom:30px;
+
+    font-size:38px;
+
+    font-weight:700;
+
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.features{
+
+    width:95%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+
+    padding-bottom:30px;
+
+}
+
+.feature-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    padding:30px;
+
+    border-radius:24px;
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 0 30px rgba(56,189,248,.25);
+
+}
+
+.feature-card h3{
+
+    font-size:26px;
+
+    color:#38bdf8;
+
+    margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+    opacity:.85;
+
+    line-height:1.8;
+
+}
+
+.feature-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    background:#38bdf8;
+
+    color:black;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+/* =========================
+   SUBJECTS SECTION
+========================= */
+
+.subjects{
+
+    width:95%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.subject{
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    transition:.3s;
+
+}
+
+.subject:hover{
+
+    transform:scale(1.03);
+
+}
+
+.subject h2{
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.subject p{
+
+    opacity:.8;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    margin-top:80px;
+
+    padding:40px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.04);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer h3{
+
+    color:#38bdf8;
+
+    margin-bottom:10px;
+
+}
+
+.footer p{
+
+    opacity:.8;
+
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero{
+
+        padding:60px 20px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .btn,
+    .install-btn{
+
+        width:100%;
+
+    }
+
+}
